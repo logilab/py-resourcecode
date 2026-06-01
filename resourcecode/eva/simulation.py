@@ -64,8 +64,8 @@ def run_simulation(
         set_trig(sigma, rho, "lower")
     else:
         sigma = np.eye(2)
-        sigma[1, 0] = rho
-        sigma[0, 1] = rho
+        sigma[1, 0] = rho[0]
+        sigma[0, 1] = rho[0]
 
     result = None
     while result is None or len(result) < n_simulations:

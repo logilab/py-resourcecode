@@ -6,7 +6,7 @@
 
 Computation times
 =================
-**00:10.513** total execution time for 5 files **from all galleries**:
+**00:26.067** total execution time for 5 files **from all galleries**:
 
 .. container::
 
@@ -32,18 +32,18 @@ Computation times
    * - Example
      - Time
      - Mem (MB)
-   * - :ref:`sphx_glr_auto_examples_plot_4_Producible.py` (``..\examples\plot_4_Producible.py``)
-     - 00:10.513
+   * - :ref:`sphx_glr_auto_examples_plot_2_Multivariate_Extremes.py` (``../examples/plot_2_Multivariate_Extremes.py``)
+     - 00:26.067
      - 0.0
-   * - :ref:`sphx_glr_auto_examples_plot_0_Database_exploration.py` (``..\examples\plot_0_Database_exploration.py``)
+   * - :ref:`sphx_glr_auto_examples_plot_0_Database_exploration.py` (``../examples/plot_0_Database_exploration.py``)
      - 00:00.000
      - 0.0
-   * - :ref:`sphx_glr_auto_examples_plot_1_data_extraction.py` (``..\examples\plot_1_data_extraction.py``)
+   * - :ref:`sphx_glr_auto_examples_plot_1_data_extraction.py` (``../examples/plot_1_data_extraction.py``)
      - 00:00.000
      - 0.0
-   * - :ref:`sphx_glr_auto_examples_plot_2_Multivariate_Extremes.py` (``..\examples\plot_2_Multivariate_Extremes.py``)
+   * - :ref:`sphx_glr_auto_examples_plot_3_Operation_Planning.py` (``../examples/plot_3_Operation_Planning.py``)
      - 00:00.000
      - 0.0
-   * - :ref:`sphx_glr_auto_examples_plot_3_Operation_Planning.py` (``..\examples\plot_3_Operation_Planning.py``)
+   * - :ref:`sphx_glr_auto_examples_plot_4_Producible.py` (``../examples/plot_4_Producible.py``)
      - 00:00.000
      - 0.0
