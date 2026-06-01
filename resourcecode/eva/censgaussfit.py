@@ -54,6 +54,7 @@ def censgaussfit(data: np.ndarray, q: float) -> OptimizeResult:
 
     tail_dependency_obs = sum(mask) / data.shape[0]
     th_norm = norm.ppf(q)
+    n_vars = data.shape[1]
 
     def fitness(cov):
         # For the 2D case, we have only one parameter
@@ -62,7 +63,9 @@ def censgaussfit(data: np.ndarray, q: float) -> OptimizeResult:
             set_trig(sigma, cov, "upper")
             set_trig(sigma, cov, "lower")
         else:
-            sigma = cov
+            sigma = np.eye(2)
+            sigma[0, 1] = cov[0]
+            sigma[1, 0] = cov[0]
 
         # Check if sigma is positive semi-definite
         eigenvalues = np.linalg.eigvalsh(sigma)
@@ -70,8 +73,8 @@ def censgaussfit(data: np.ndarray, q: float) -> OptimizeResult:
             # Return a large penalty for non-PSD matrices
             return 1e10
 
-        rv = multivariate_normal(mean=np.zeros(len(cov)), cov=sigma, allow_singular=True)
-        upper_point = np.full(len(cov), th_norm)
+        rv = multivariate_normal(mean=np.zeros(n_vars), cov=sigma, allow_singular=True)
+        upper_point = np.full(n_vars, th_norm)
         prob = 1 - rv.cdf(upper_point)
 
         return (tail_dependency_obs - prob) ** 2
